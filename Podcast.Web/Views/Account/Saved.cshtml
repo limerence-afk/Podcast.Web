@@ -1,0 +1,35 @@
+﻿@model Podcast.BL.DataTransfer.UserDTO
+     <table class="table">
+          <tr>
+               <th>
+                    Name
+               </th>
+
+               <th></th>
+          </tr>
+          @if (Model.Songs != null)
+          {
+               foreach (var item in Model.Songs)
+               {
+                    <tr>
+                         <td>
+                              @Html.DisplayFor(modelItem => item.Name)
+                         </td>
+                         <td>
+                              <audio controls>
+                                   @{ var url = string.Format($"/podcasts/{item.Id}.mp3");}
+                                   <source src="@url" type="audio/mp3">
+                              </audio>
+                         </td>
+                         <td>
+                              @if (Model!= null)
+                              {
+                                   @Html.ActionLink("Remove Favourite","RemoveSong", "Account", new { @songId = item.Id },new { })
+                              }
+                         </td>
+                    </tr>
+               }
+          }
+
+
+     </table>

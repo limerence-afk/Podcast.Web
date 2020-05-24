@@ -1,0 +1,60 @@
+﻿@model Podcast.Web.Models.MusicPageModel
+
+<p>
+     @if (Model.User != null && Model.User.Role == "admin")
+     {
+          using (Html.BeginForm("UploadSong", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+          {
+               <input type="file" name="file" />
+               <input type="submit" value="Upload" />
+          }
+     }
+</p>
+<table class="table">
+     <tr>
+          <th>
+               Name
+          </th>
+
+          <th></th>
+     </tr>
+     @if (Model.Songs != null)
+     {
+          foreach (var item in Model.Songs)
+          {
+               <tr>
+                    <td>
+                         @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                         <audio controls>
+                              @{ var url = string.Format($"/podcasts/{item.Id}.mp3");}
+                              <source src="@url" type="audio/mp3">
+                         </audio>
+                    </td>
+                    <td>
+                         @if (Model.User != null)
+                         {
+                              if (Model.User.Role == "admin")
+                              {
+                                   @Html.ActionLink("Delete Song", "DeleteSong", "Admin", new { @songId = item.Id }, new { })
+                              }
+                              else
+                              {
+                                   if (Model.User.Songs.Any(s => s.Id == item.Id))
+                                   {
+                         <span> Podcast Added </span>
+                                   }
+                                   else
+                                   {
+                                   @Html.ActionLink("Add to fav", "AddSong", "Account", new { @songId = item.Id }, new { })
+                                   }
+                              }
+                         }
+                    </td>
+               </tr>
+          }
+     }
+
+
+</table>

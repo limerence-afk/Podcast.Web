@@ -1,0 +1,228 @@
+﻿
+@{
+    ViewBag.Title = "Main";
+}
+@section Header{
+     @Html.Partial("HeaderPartial")
+     }
+@section Scripts{
+     @Scripts.Render("~/bundles/main")
+     }
+@section Styles{
+     @Styles.Render("~/bundles/home")
+     }
+    
+          <div class="container">
+               <section id="best-features" class="text-center">
+                    <h2 class="mb-5 font-weight-bold"> Best collection of knowledge</h2>
+                    <div class="row d-flex justify-content-center mb-4">
+                         <div class="col-md-8">
+                              <p class="grey-text">
+                                   Listen and improve yourself.
+                              </p>
+                         </div>
+                    </div>
+                    <div class="row">
+                         <div class="col-md-4 mb-5">
+                              <i class="fa fa-headphones fa-4x grey-text"></i>
+                              <h4 class="my-4 font-weight-bold"> Put on your headphones</h4>
+                              <p class="grey-text">for better immersion use headphones </p>
+                         </div>
+                         <div class="col-md-4 mb-5">
+                              <i class="fa fa-play fa-4x grey-text"></i>
+                              <h4 class="my-4 font-weight-bold"> Play back </h4>
+                              <p class="grey-text"> </p>
+                         </div>
+                         <div class="col-md-4 mb-5">
+                              <i class="fa fa-brain fa-4x grey-text"></i>
+                              <h4 class="my-4 font-weight-bold"> Get useful information</h4>
+                              <p class="grey-text">Knowledge never been useless </p>
+                         </div>
+                    </div>
+               </section>
+               <hr class="my-6">
+               <section id="examples" class="text-center">
+                    <h2 class="mb-5 font-weight-bold">Dive in the world of podcasts</h2>
+
+                    <div class="row">
+                         <div class="col-lg-4 col-md-12 mb-4">
+                              <div class="view overlay zoom">
+                                   <img src="https://i.ibb.co/hmS0q7K/How-Technology-Is-Changing-the-Way-We-Love.jpg" alt=""
+                                        class="img-flid">
+                                   <div class="mask flex-center"></div>
+                              </div>
+                              <h4 class="my-4 font-weight-bold">
+                                   About Love
+                              </h4>
+                              <p class="grey-text">love is...</p>
+                              <audio controls>
+                                   <source src="audio/love.mp3" type="audio/ogg; codecs=vorbis">
+                              </audio>
+                         </div>
+                         <div class="col-lg-4 col-md-12 mb-4">
+                              <div class="view overlay zoom">
+                                   <img src="https://i.ibb.co/hVpjfGD/og-image-pvk21jd9bj22.png" alt="" class="img-flid">
+                                   <div class="mask flex-center"></div>
+                              </div>
+                              <h4 class="my-4 font-weight-bold">
+                                   About Music
+                              </h4>
+                              <p class="grey-text">What music does to our brain waves</p>
+                              <audio controls>
+                                   <source src="audio/music.mp3" type="audio/ogg; codecs=vorbis">
+                              </audio>
+
+                         </div>
+                         <div class="col-lg-4 col-md-12 mb-4">
+                              <div class="view overlay zoom">
+                                   <img src="https://i.ibb.co/Ycggyr0/Travel000-2000x1200.jpg" alt="" class="img-flid">
+                                   <div class="mask flex-center"></div>
+                              </div>
+                              <h4 class="my-4 font-weight-bold">
+                                   About Travel
+                              </h4>
+                              <p class="grey-text">How to travel without money (almost)</p>
+                              <audio controls>
+                                   <source src="audio/travel.mp3" type="audio/ogg; codecs=vorbis">
+                              </audio>
+
+                         </div>
+                         <div class="col-3 mx-auto mb-4">
+                              <button id="more-podcasts" class="btn btn-deep-purple rounded">
+                                   <span>
+                                        More Podcasts
+                                   </span>
+                              </button>
+                         </div>
+
+                    </div>
+               </section>
+               </div>
+          <div id="background">
+               <div class="container flex-center my-auto">
+                    <div class="row bg-gray rounded-lg">
+                         <div class="col-12">
+                              <div class="row my-2 thin-borders">
+                                   <div class="col-2">
+                                        <img class="img-fluid img my-image"
+                                             src="https://i.ibb.co/hmS0q7K/How-Technology-Is-Changing-the-Way-We-Love.jpg" alt="">
+                                   </div>
+                                   <div class="col-4 white-text my-auto">
+                                        <span>
+                                             Name of the song
+                                        </span>
+                                        <br>
+                                        <span>
+                                             Author
+                                        </span>
+                                   </div>
+                                   <div class="col-6 my-auto">
+                                        <audio controls>
+                                             <source src="audio/travel.mp3" type="audio/ogg; codecs=vorbis">
+                                        </audio>
+                                   </div>
+                              </div>
+                              <div class="row my-2 thin-borders">
+                                   <div class="col-2">
+                                        <img class="img-fluid my-image"
+                                             src="https://i.ibb.co/hmS0q7K/How-Technology-Is-Changing-the-Way-We-Love.jpg" alt="">
+                                   </div>
+                                   <div class="col-4 white-text my-auto">
+                                        <span>
+                                             Name of the song
+                                        </span>
+                                        <br>
+                                        <span>
+                                             Author
+                                        </span>
+                                   </div>
+                                   <div class="col-6 my-auto">
+                                        <audio controls>
+                                             <source src="audio/travel.mp3" type="audio/ogg; codecs=vorbis">
+                                        </audio>
+                                   </div>
+                              </div>
+                              <div class="row my-2 thin-borders">
+                                   <div class="col-2">
+                                        <img class="img-fluid my-image"
+                                             src="https://i.ibb.co/hmS0q7K/How-Technology-Is-Changing-the-Way-We-Love.jpg" alt="">
+                                   </div>
+                                   <div class="col-4 white-text my-auto">
+                                        <span>
+                                             Name of the song
+                                        </span>
+                                        <br>
+                                        <span>
+                                             Author
+                                        </span>
+                                   </div>
+                                   <div class="col-6 my-auto">
+                                        <audio controls>
+                                             <source src="audio/travel.mp3" type="audio/ogg; codecs=vorbis">
+                                        </audio>
+                                   </div>
+                              </div>
+                              <div class="row my-2 thin-borders">
+                                   <div class="col-2">
+                                        <img class="img-fluid my-image"
+                                             src="https://i.ibb.co/hmS0q7K/How-Technology-Is-Changing-the-Way-We-Love.jpg" alt="">
+                                   </div>
+                                   <div class="col-4 white-text my-auto">
+                                        <span>
+                                             Name of the song
+                                        </span>
+                                        <br>
+                                        <span>
+                                             Author
+                                        </span>
+                                   </div>
+                                   <div class="col-6 my-auto">
+                                        <audio controls>
+                                             <source src="audio/travel.mp3" type="audio/ogg; codecs=vorbis">
+                                        </audio>
+                                   </div>
+                              </div>
+                              <div class="row my-2 thin-borders">
+                                   <div class="col-2">
+                                        <img class="img-fluid my-image"
+                                             src="https://i.ibb.co/hmS0q7K/How-Technology-Is-Changing-the-Way-We-Love.jpg" alt="">
+                                   </div>
+                                   <div class="col-4 white-text my-auto">
+                                        <span>
+                                             Name of the song
+                                        </span>
+                                        <br>
+                                        <span>
+                                             Author
+                                        </span>
+                                   </div>
+                                   <div class="col-6 my-auto">
+                                        <audio controls>
+                                             <source src="audio/travel.mp3" type="audio/ogg; codecs=vorbis">
+                                        </audio>
+                                   </div>
+                              </div>
+                              <div class="row my-2 thin-borders">
+                                   <div class="col-2">
+                                        <img class="img-fluid my-image"
+                                             src="https://i.ibb.co/hmS0q7K/How-Technology-Is-Changing-the-Way-We-Love.jpg" alt="">
+                                   </div>
+                                   <div class="col-4 white-text my-auto">
+                                        <span>
+                                             Name of the song
+                                        </span>
+                                        <br>
+                                        <span>
+                                             Author
+                                        </span>
+                                   </div>
+                                   <div class="col-6 my-auto">
+                                        <audio controls>
+                                             <source src="audio/travel.mp3" type="audio/ogg; codecs=vorbis">
+                                        </audio>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
